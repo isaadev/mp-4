@@ -3,6 +3,11 @@ import { fetchData } from '../lib/fetchData';
 import { Movie } from '../../types';
 import Link from 'next/link';
 
+// func to change the title since we cant in an async function
+export const metadata = {
+  title: 'Movies | MyApp'
+};
+
 export default async function MoviesPage() {
   try {
     const movies: Movie[] = await fetchData();
@@ -27,6 +32,6 @@ export default async function MoviesPage() {
       </div>
     );
   } catch (error) {
-    return <div className="text-red-500 p-6">Error: {(error as Error).message}</div>;
+      return <div className="text-red-500 p-6">Error: {(error as Error).message}</div>;
   }
 }
