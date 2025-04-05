@@ -1,6 +1,6 @@
 import { Movie } from '../../types';
 
-export default function Card({ title, poster_path, release_date }: Movie) {
+export default function MovieCard({ title, poster_path, release_date }: Movie) {
   return (
     <div className="bg-black shadow-lg shadow-purple-400/90 max-w-64 p-2 rounded">
       <img
